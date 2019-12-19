@@ -1,6 +1,6 @@
-FROM ubuntu:19.10
+FROM ubuntu:19.04 
 ENV RELEASE_DISTRO ubuntu
-ENV RELEASE_VERSION 19.10
+ENV RELEASE_VERSION 19.04
 
 RUN apt-get update
 RUN apt-get install -y \
