@@ -13,5 +13,14 @@ echo "export MOCK_OPTS='--old-chroot'" >> /etc/bashrc
 echo
 echo "Welcome to ubuntu 18.04 builder"
 echo
-su - $USERNAME
-
+if [ -n "$SCRIPTRUNNER" ] ; then
+   if [ -d "$CURRENTPATH" ] ; then
+      cd $CURRENTPATH
+   else
+      cd $HOME
+   fi
+   chmod 755 $SCRIPTRUNNER
+   sudo --preserve-env="CURRENTPATH" -u $USERNAME $SCRIPTRUNNER
+else 
+   su - $USERNAME
+fi
