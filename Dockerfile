@@ -1,6 +1,6 @@
-FROM ubuntu:20.04
+FROM ubuntu:16.04
 ENV RELEASE_DISTRO ubuntu
-ENV RELEASE_VERSION 20.04
+ENV RELEASE_VERSION 16.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update
@@ -19,7 +19,6 @@ RUN apt-get install -y \
     locales \
     wget \
     chrpath \ 
-    python3-distutils \ 
     vim \
     screen \
     bzr \
