@@ -23,6 +23,7 @@ RUN apt-get install -y \
     vim \
     screen \
     bzr \
+    lftp \
     pbuilder \
     debootstrap \
     devscripts \
