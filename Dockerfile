@@ -26,9 +26,11 @@ RUN apt-get install -y \
     pbuilder \
     debootstrap \
     devscripts \
+    git-buildpackage \
     libncursesw5 \
     ubuntu-dev-tools
 RUN apt upgrade -y
+RUN apt install apt-mirror
 # Make sure docker works in container
 RUN apt install -y apt-transport-https ca-certificates curl software-properties-common
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
